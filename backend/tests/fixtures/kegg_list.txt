@@ -1,0 +1,6 @@
+hsa04151	PI3K-Akt signaling pathway - Homo sapiens (human)
+hsa04210	Apoptosis - Homo sapiens (human)
+hsa04115	p53 signaling pathway - Homo sapiens (human)
+hsa05200	Pathways in cancer - Homo sapiens (human)
+hsa05206	MicroRNAs in cancer - Homo sapiens (human)
+hsa05224	Breast cancer - Homo sapiens (human)

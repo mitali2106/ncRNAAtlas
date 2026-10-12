@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-10-12T15:20:28.838046+00:00",
+  "dataset_label": "sample",
+  "synthetic_records": 0,
+  "description": "Excerpt of real source records for demonstration. Not a complete or representative dataset; counts shown in sample mode describe the excerpt only.",
+  "selection": {
+    "mirnas": [
+      "hsa-mir-21",
+      "hsa-mir-155",
+      "hsa-mir-34a",
+      "hsa-mir-15a",
+      "hsa-mir-16-1",
+      "hsa-mir-16",
+      "hsa-mir-122",
+      "hsa-mir-145",
+      "hsa-let-7a-1"
+    ],
+    "lncrnas": [
+      "MALAT1",
+      "HOTAIR",
+      "H19",
+      "MEG3",
+      "NEAT1",
+      "PVT1",
+      "CDKN2B-AS1",
+      "GAS5",
+      "LINC00152",
+      "XIST"
+    ],
+    "diseases": [
+      "Carcinoma, Hepatocellular",
+      "Breast Neoplasms",
+      "Lung Neoplasms",
+      "Carcinoma, Non-Small-Cell Lung",
+      "Colorectal Neoplasms",
+      "Glioblastoma",
+      "Glioma",
+      "Leukemia, Lymphocytic, Chronic, B-Cell",
+      "Stomach Neoplasms",
+      "Prostatic Neoplasms",
+      "Pancreatic Neoplasms",
+      "Osteosarcoma",
+      "Carcinoma, Renal Cell",
+      "Diabetes Mellitus, Type 2",
+      "Alzheimer Disease",
+      "Atrial Fibrillation"
+    ],
+    "max_records_per_ncrna_disease_pair": 6,
+    "max_non_human_lncrnadisease_rows": 8
+  },
+  "files": {
+    "hmdd_sample.tsv": {
+      "rows": 389,
+      "from": {
+        "label": "HMDD v3.2 all data",
+        "url": "http://www.cuilab.cn/static/hmdd3/data/alldata.txt",
+        "file": "hmdd_alldata.txt",
+        "bytes": 7502902,
+        "sha256": "ef1a0c7076a7223f6d9581fb5f5c0f06efb020f5e12a36f5b281d5071c4de909",
+        "downloaded_at": "2026-10-12T15:19:52.486217+00:00"
+      }
+    },
+    "lncrnadisease_sample.tsv": {
+      "rows": 388,
+      "non_human_rows": 8,
+      "from": {
+        "label": "LncRNADisease v3.0 all data",
+        "url": "http://www.rnanut.net/lncrnadisease/static/download/website_alldata.tsv",
+        "file": "lncrnadisease_website_alldata.tsv",
+        "bytes": 14211206,
+        "sha256": "a1e71ee6384f2b5d724a957c5b85adca458efe896fd4df7c4c03e958a8501252",
+        "downloaded_at": "2026-10-12T14:37:09.238550+00:00"
+      }
+    },
+    "curated_associations.tsv": {
+      "rows": 8,
+      "method": "hand-curated; every claim checked against the PubMed abstract of the cited PMID"
+    },
+    "curated_targets.tsv": {
+      "rows": 9,
+      "method": "hand-curated; every claim checked against the PubMed abstract of the cited PMID"
+    },
+    "hgnc_subset.tsv": {
+      "rows": 46,
+      "from": {
+        "label": "HGNC complete set",
+        "url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+        "file": "hgnc_complete_set.txt",
+        "bytes": 16973159,
+        "sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "downloaded_at": "2026-10-12T14:37:21.373863+00:00"
+      }
+    },
+    "mesh_cache.json": {
+      "lookups": 22,
+      "resolved": 21
+    },
+    "pubmed_cache.json": {
+      "requested": 729,
+      "retrieved": 729
+    },
+    "kegg_cache.json": {
+      "genes": 7,
+      "genes_with_pathways": 7,
+      "pathways": 92,
+      "retrieved_at": "2026-10-12"
+    }
+  }
+}

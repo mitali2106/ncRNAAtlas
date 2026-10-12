@@ -1,0 +1,108 @@
+{
+ "acute myocardial infarction": null,
+ "alzheimer disease": {
+  "id": "D000544",
+  "label": "Alzheimer Disease",
+  "matched_via": "descriptor_label"
+ },
+ "atrial fibrillation": {
+  "id": "D001281",
+  "label": "Atrial Fibrillation",
+  "matched_via": "descriptor_label"
+ },
+ "breast neoplasms": {
+  "id": "D001943",
+  "label": "Breast Neoplasms",
+  "matched_via": "descriptor_label"
+ },
+ "carcinoma, hepatocellular": {
+  "id": "D006528",
+  "label": "Carcinoma, Hepatocellular",
+  "matched_via": "descriptor_label"
+ },
+ "carcinoma, non-small-cell lung": {
+  "id": "D002289",
+  "label": "Carcinoma, Non-Small-Cell Lung",
+  "matched_via": "descriptor_label"
+ },
+ "carcinoma, renal cell": {
+  "id": "D002292",
+  "label": "Carcinoma, Renal Cell",
+  "matched_via": "descriptor_label"
+ },
+ "colorectal neoplasms": {
+  "id": "D015179",
+  "label": "Colorectal Neoplasms",
+  "matched_via": "descriptor_label"
+ },
+ "diabetes mellitus, type 2": {
+  "id": "D003924",
+  "label": "Diabetes Mellitus, Type 2",
+  "matched_via": "descriptor_label"
+ },
+ "glioblastoma": {
+  "id": "D005909",
+  "label": "Glioblastoma",
+  "matched_via": "descriptor_label"
+ },
+ "glioma": {
+  "id": "D005910",
+  "label": "Glioma",
+  "matched_via": "descriptor_label"
+ },
+ "leukemia, lymphocytic, chronic, b-cell": {
+  "id": "D015451",
+  "label": "Leukemia, Lymphocytic, Chronic, B-Cell",
+  "matched_via": "descriptor_label"
+ },
+ "lung neoplasms": {
+  "id": "D008175",
+  "label": "Lung Neoplasms",
+  "matched_via": "descriptor_label"
+ },
+ "myocardial reperfusion": {
+  "id": "D015425",
+  "label": "Myocardial Reperfusion",
+  "matched_via": "descriptor_label"
+ },
+ "osteoarthritis": {
+  "id": "D010003",
+  "label": "Osteoarthritis",
+  "matched_via": "descriptor_label"
+ },
+ "osteosarcoma": {
+  "id": "D012516",
+  "label": "Osteosarcoma",
+  "matched_via": "descriptor_label"
+ },
+ "pancreatic neoplasms": {
+  "id": "D010190",
+  "label": "Pancreatic Neoplasms",
+  "matched_via": "descriptor_label"
+ },
+ "parkinson disease": {
+  "id": "D010300",
+  "label": "Parkinson Disease",
+  "matched_via": "descriptor_label"
+ },
+ "prostatic neoplasms": {
+  "id": "D011471",
+  "label": "Prostatic Neoplasms",
+  "matched_via": "descriptor_label"
+ },
+ "renal insufficiency, chronic": {
+  "id": "D051436",
+  "label": "Renal Insufficiency, Chronic",
+  "matched_via": "descriptor_label"
+ },
+ "sepsis": {
+  "id": "D018805",
+  "label": "Sepsis",
+  "matched_via": "descriptor_label"
+ },
+ "stomach neoplasms": {
+  "id": "D013274",
+  "label": "Stomach Neoplasms",
+  "matched_via": "descriptor_label"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "breast neoplasms": {
+  "id": "D001943",
+  "label": "Breast Neoplasms",
+  "matched_via": "descriptor_label"
+ },
+ "carcinoma, hepatocellular": {
+  "id": "D006528",
+  "label": "Carcinoma, Hepatocellular",
+  "matched_via": "descriptor_label"
+ },
+ "carcinoma, non-small-cell lung": {
+  "id": "D002289",
+  "label": "Carcinoma, Non-Small-Cell Lung",
+  "matched_via": "descriptor_label"
+ },
+ "colorectal neoplasms": {
+  "id": "D015179",
+  "label": "Colorectal Neoplasms",
+  "matched_via": "descriptor_label"
+ },
+ "hepatocellular carcinoma": {
+  "entry_term": "Hepatocellular Carcinoma",
+  "id": "D006528",
+  "label": "Carcinoma, Hepatocellular",
+  "matched_via": "entry_term"
+ },
+ "leukemia, lymphocytic, chronic, b-cell": {
+  "id": "D015451",
+  "label": "Leukemia, Lymphocytic, Chronic, B-Cell",
+  "matched_via": "descriptor_label"
+ },
+ "liver cancer of hepatocytes": null,
+ "osteosarcoma": {
+  "id": "D012516",
+  "label": "Osteosarcoma",
+  "matched_via": "descriptor_label"
+ },
+ "parkinson disease": {
+  "id": "D010300",
+  "label": "Parkinson Disease",
+  "matched_via": "descriptor_label"
+ },
+ "prostatic neoplasms": {
+  "id": "D011471",
+  "label": "Prostatic Neoplasms",
+  "matched_via": "descriptor_label"
+ }
+}
