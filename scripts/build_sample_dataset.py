@@ -113,6 +113,8 @@ def main():
         if parsed:
             symbols.add(parsed.hgnc_symbol)
             symbols.update(hgnc.mirna_loci(parsed.hgnc_base))
+            # Legacy miRBase IDs (e.g. hsa-mir-122a) resolve through HGNC alias symbols.
+            symbols.update(r.symbol for r in hgnc.by_alias.get(parsed.precursor_name.upper(), []) if r.is_mirna)
     lnc_names = {clean(r["ncRNA Symbol"]) for r in lnc_rows} | {r["ncrna_name"] for r in curated
                                                                 if r["ncrna_type"] == "lncRNA"}
     gene_names = {r["gene_symbol"] for r in curated + targets if r.get("gene_symbol")}

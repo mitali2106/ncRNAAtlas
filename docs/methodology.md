@@ -127,7 +127,7 @@ The most-cited associations are shown first, up to `max_associations`; the respo
 
 ## 8. Quality control
 
-Each import writes `data/reports/import_job_<id>.json` and `.csv` with:
+Each import writes `data/reports/import_job_<id>_<timestamp>.json` and `.csv` with:
 
 * raw and valid records, inserted/merged/unchanged/skipped counts, and skip reasons;
 * duplicates within the file and records merged into existing associations;

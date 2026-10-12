@@ -131,7 +131,7 @@ def run_import(adapter_key, path, *, dataset_label="real", source_version=None, 
     db.session.commit()
     report = generate_quality_report(summary)
     report["import_job_id"] = job.id
-    path_out = save_report(report, current_app.config["REPORT_DIR"], f"import_job_{job.id}")
+    path_out = save_report(report, current_app.config["REPORT_DIR"], f"import_job_{job.id}_{job.started_at:%Y%m%dT%H%M%S}")
     job.report_path = str(path_out)
     db.session.commit()
     return result, job

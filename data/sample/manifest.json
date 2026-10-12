@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T15:20:28.838046+00:00",
+  "generated_at": "2026-10-12T15:45:11.581975+00:00",
   "dataset_label": "sample",
   "synthetic_records": 0,
   "description": "Excerpt of real source records for demonstration. Not a complete or representative dataset; counts shown in sample mode describe the excerpt only.",
@@ -81,7 +81,7 @@
       "method": "hand-curated; every claim checked against the PubMed abstract of the cited PMID"
     },
     "hgnc_subset.tsv": {
-      "rows": 46,
+      "rows": 28,
       "from": {
         "label": "HGNC complete set",
         "url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",

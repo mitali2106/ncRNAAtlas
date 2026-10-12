@@ -39,8 +39,11 @@ def compute_statistics(top_n=10):
             select(func.count(NcRNAGeneInteraction.id)).where(NcRNAGeneInteraction.is_synthetic.is_(False))),
         "publications": _scalar(select(func.count(distinct(AssociationPublication.publication_id)))
                                 .join(Association).where(real_assoc)),
+        # Same population as "publications": PMIDs cited by (non-synthetic) associations.
         "publications_with_metadata": _scalar(
-            select(func.count(Publication.id)).where(Publication.metadata_status == "fetched")),
+            select(func.count(distinct(AssociationPublication.publication_id)))
+            .join(Association).join(Publication, Publication.id == AssociationPublication.publication_id)
+            .where(real_assoc, Publication.metadata_status == "fetched")),
         "mapped_pathways": _scalar(select(func.count(distinct(GenePathway.pathway_id)))),
         "genes_with_pathway_mapping": _scalar(select(func.count(distinct(GenePathway.gene_id)))),
     }

@@ -81,6 +81,32 @@ def test_locus_ambiguous_mirna_is_flagged_not_merged(resolver):
     assert r.stable_identifier is None
 
 
+def test_digit_final_stem_only_matches_hyphenated_loci(resolver):
+    # hsa-mir-1 must list MIR1-1/MIR1-2 only, never MIR100 or MIR122.
+    r = resolver.resolve_ncrna("hsa-mir-1", "miRNA")
+    assert r.status == "ambiguous" and set(r.extra["candidates"]) == {"MIR1-1", "MIR1-2"}
+    assert set(resolver.resolve_ncrna("hsa-mir-125b", "miRNA").extra["candidates"]) == {"MIR125B1", "MIR125B2"}
+
+
+def test_legacy_mirbase_name_resolves_via_hgnc_alias(resolver):
+    r = resolver.resolve_ncrna("hsa-mir-122a", "miRNA")  # retired name of hsa-mir-122
+    assert r.status == "resolved" and r.canonical_name == "hsa-mir-122"
+    assert r.stable_identifier == "MI0000442" and "Legacy name" in r.note
+    assert any(a[0] == "hsa-mir-122a" for a in r.aliases)
+    current = resolver.resolve_ncrna("hsa-mir-122", "miRNA")
+    assert current.canonical_name == "hsa-mir-122" and current.note is None
+    renamed = resolver.resolve_ncrna("hsa-mir-208", "miRNA")  # renamed hsa-mir-208a
+    assert renamed.canonical_name == "hsa-mir-208a" and renamed.status == "resolved"
+
+
+def test_hgnc_symbol_to_mirbase_name():
+    from app.normalization.resolver import hgnc_symbol_to_mirbase_name as f
+
+    assert [f(s) for s in ("MIR21", "MIR125B1", "MIR1-1", "MIRLET7A1", "MIR103A2", "MIR124-2")] == [
+        "hsa-mir-21", "hsa-mir-125b-1", "hsa-mir-1-1", "hsa-let-7a-1", "hsa-mir-103a-2", "hsa-mir-124-2"]
+    assert f("MIR1-1HG") is None  # host gene, not a miRNA locus
+
+
 def test_lncrna_previous_symbol_resolves_to_approved_symbol(resolver):
     r = resolver.resolve_ncrna("LINC00152", "lncRNA")
     assert r.status == "resolved"

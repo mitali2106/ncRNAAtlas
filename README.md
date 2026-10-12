@@ -263,7 +263,7 @@ Provenance: `data/sample/manifest.json`.
 
 ```bash
 python scripts/download_sources.py                 # HMDD, LncRNADisease, HGNC → data/raw/ (+ manifest)
-python scripts/import_data.py real                 # HMDD + LncRNADisease + PubMed metadata
+python scripts/import_data.py real                 # HMDD + LncRNADisease + curated records + PubMed metadata
 python scripts/normalize_data.py --diseases        # retry MeSH for unresolved diseases
 python scripts/map_pathways.py                     # KEGG gene → pathway
 python scripts/normalize_data.py --sequences       # optional: miRNA sequences from RNAcentral
@@ -280,7 +280,7 @@ python scripts/import_data.py targets    --path my_targets.tsv
 ```
 
 Every command accepts `--dry-run`, `--human-only`, `--skip-unresolved`, `--no-live` and `--limit N`. Each
-import is logged in `import_jobs` and writes `data/reports/import_job_<id>.json` and `.csv`.
+import is logged in `import_jobs` and writes `data/reports/import_job_<id>_<timestamp>.json` and `.csv`.
 
 **Literature review:**
 
@@ -313,7 +313,7 @@ on Linux), with `APP_ENV=production`, a PostgreSQL `DATABASE_URL`, a strong `SEC
 ## 18. Testing
 
 ```bash
-cd backend && python -m pytest -q          # 106 tests
+cd backend && python -m pytest -q          # 109 tests
 cd frontend && npm test                    # 16 tests
 cd frontend && npx eslint src && npm run build
 ```

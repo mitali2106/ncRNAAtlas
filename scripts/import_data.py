@@ -120,6 +120,10 @@ def main():
         elif args.command == "real":
             for key in ("hmdd", "lncrnadisease"):
                 run(key, DEFAULT_PATHS[key], args, version=SOURCE_VERSIONS[key], label=key)
+            # The hand-curated, abstract-checked records are real data too; they supply the
+            # gene links that the bulk association files do not contain.
+            for adapter, path, version, _ in SAMPLE_STEPS[2:]:
+                run(adapter, path, args, version=version, label=f"curated: {path.name}")
             pubmed(args)
             print("\nNext: python scripts/map_pathways.py   (KEGG)  and  python scripts/normalize_data.py --all")
         elif args.command in ("hmdd", "lncrnadisease"):
